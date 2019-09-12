@@ -7,12 +7,10 @@ class TerraformProviderK8s < Formula
 
   if OS.mac?
     url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.3.0/terraform-provider-k8s_0.3.0_darwin_amd64.tar.gz"
-    sha256 "035239f87ab4516c69b4204cb0dc8c2a66721278b6265f534f6ff261fe6a0477"
+    sha256 "003fbc66b11cbb2d5855f735ee40cc9ea4b3feeafcaae81fc3a12e719acc827b"
   elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.3.0/terraform-provider-k8s_0.3.0_linux_amd64.tar.gz"
-      sha256 "5e6140be66b04d378a492056294b0b4f7f90abc7f5c926723cb50927101e4e21"
-    end
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.3.0/terraform-provider-k8s_0.3.0_linux_amd64.tar.gz"
+    sha256 "1c02e4c0568c4acc9efcf46bdf9ed9219244fa1aaba70654a5f30b47ed731e1b"
   end
 
   def install
