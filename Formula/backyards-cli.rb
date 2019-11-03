@@ -2,14 +2,14 @@
 class BackyardsCli < Formula
   desc "Command-line interface for Backyards"
   homepage "https://banzaicloud.com/"
-  version "0.0.8"
+  version "1.0.0-rc.2"
 
   if OS.mac?
-    url "https://github.com/banzaicloud/backyards-cli/releases/download/0.0.8/backyards_0.0.8_darwin_amd64.tar.gz"
-    sha256 "503fd19cb033c2c8d93870ad844068406d93c350cae69f8128aaf8ff1fb27550"
+    url "https://github.com/banzaicloud/backyards-cli/releases/download/1.0.0-rc.2/backyards_1.0.0-rc.2_darwin_amd64.tar.gz"
+    sha256 "795e66b4de5c065928a997741076b80a22dc8437858f58fd2218da0863dc6954"
   elsif OS.linux?
-    url "https://github.com/banzaicloud/backyards-cli/releases/download/0.0.8/backyards_0.0.8_linux_amd64.tar.gz"
-    sha256 "5be2ddc17f626124b69e2c39c93c6c816fd4d2690daefc3d3ba6329823cb1d55"
+    url "https://github.com/banzaicloud/backyards-cli/releases/download/1.0.0-rc.2/backyards_1.0.0-rc.2_linux_amd64.tar.gz"
+    sha256 "97a62f9257bb12be8da31af6d32d45290ebde3ddc07e9a6f91e188fa023b31dc"
   end
 
   def install
