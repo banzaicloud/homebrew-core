@@ -2,16 +2,16 @@
 class Yami < Formula
   desc "YAML CLI merge tool"
   homepage "https://banzaicloud.com/"
-  version "0.0.3"
+  version "0.0.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/banzaicloud/yami/releases/download/0.0.3/yami_0.0.3_darwin_amd64.tar.gz"
-    sha256 "66c98590e218a00896cadef2d83d75d710f0c092f77127ff66d0842469de5323"
+    url "https://github.com/banzaicloud/yami/releases/download/0.0.4/yami_0.0.4_darwin_amd64.tar.gz"
+    sha256 "fcdb8aae6f300fdf0a45a83551d305c377ef06f646b8dbbf4aa712161ee05249"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/banzaicloud/yami/releases/download/0.0.3/yami_0.0.3_linux_amd64.tar.gz"
-      sha256 "328817f26f4947ece918704345d4faa84c5363e75ed4733c9562ce6883ed2564"
+      url "https://github.com/banzaicloud/yami/releases/download/0.0.4/yami_0.0.4_linux_amd64.tar.gz"
+      sha256 "be911f5eaace5b0d433bfcc75f1c5f89de24e15ea231ff91dc91ea51c6358273"
     end
   end
 
