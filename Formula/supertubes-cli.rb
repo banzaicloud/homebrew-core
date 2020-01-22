@@ -2,14 +2,14 @@
 class SupertubesCli < Formula
   desc "Command-line interface for Supertubes"
   homepage "https://banzaicloud.com/"
-  version "0.3.10"
+  version "0.4.1"
 
   if OS.mac?
-    url "https://banzaicloud.com/downloads/supertubes-cli/0.3.10/dist/supertubes_0.3.10_darwin_amd64.tar.gz"
-    sha256 "3bbe464d2726aa98efc4229a89e8b0263062b587240fe813931c660438fe391a"
+    url "https://banzaicloud.com/downloads/supertubes-cli/0.4.1/dist/supertubes_0.4.1_darwin_amd64.tar.gz"
+    sha256 "0d985c3f740971ec61528114bf87ba22d9730407df781dcbe1d12e64f29b5d5d"
   elsif OS.linux?
-    url "https://banzaicloud.com/downloads/supertubes-cli/0.3.10/dist/supertubes_0.3.10_linux_amd64.tar.gz"
-    sha256 "21ec6cdba0b31aaa3a191078a04f4e1527edf242f1eb8022e9c4beceb4a20a1e"
+    url "https://banzaicloud.com/downloads/supertubes-cli/0.4.1/dist/supertubes_0.4.1_linux_amd64.tar.gz"
+    sha256 "74f58436efc12b6f746e100e8262092be8826e0a26e133f2befbdb208094c9ce"
   end
 
   def install
