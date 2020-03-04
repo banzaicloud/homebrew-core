@@ -6,11 +6,11 @@ class TerraformProviderK8s < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/0.7.3/terraform-provider-k8s_0.7.3_darwin_amd64.tar.gz"
-    sha256 "0a0967d4248cf3e764a4c7f84ce9ca0967f7ae7d3df49f6f6e2d6db8ddf3c067"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.3/terraform-provider-k8s_0.7.3_darwin_amd64.tar.gz"
+    sha256 "c13d7984a9050177a9593dd69b5c21cd782187514affd2a0f756ac117d9df6dd"
   elsif OS.linux?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/0.7.3/terraform-provider-k8s_0.7.3_linux_amd64.tar.gz"
-    sha256 "3238777809162907274dc55a6ffa5976d605ca064f1ea9282e72aa0e9903964b"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.3/terraform-provider-k8s_0.7.3_linux_amd64.tar.gz"
+    sha256 "426569d274a76d1e1ce0318507125d9aa7b2e12b6fcb7c0652d56f83aaa38361"
   end
 
   def install
