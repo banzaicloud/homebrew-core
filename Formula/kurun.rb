@@ -2,16 +2,16 @@
 class Kurun < Formula
   desc "Run main.go in Kubernetes with one command"
   homepage "https://banzaicloud.com/blog/kurun"
-  version "0.3.1"
+  version "0.3.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/banzaicloud/kurun/releases/download/0.3.1/kurun-darwin-amd64.tar.gz"
-    sha256 "d6461c3af13d4463b2abf3bc1dc1ff643e2810aa45cacd8979ec0999bbf47ff3"
+    url "https://github.com/banzaicloud/kurun/releases/download/0.3.2/kurun-darwin-amd64.tar.gz"
+    sha256 "09bcc76b7f13d7b5cee280150907f9b3bc4a26c444e77023812c768ba2b5ffbb"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/banzaicloud/kurun/releases/download/0.3.1/kurun-linux-amd64.tar.gz"
-      sha256 "771dfa888b0c17708c789497955952d3d09333fce14e6a63a3a6b19d0937325c"
+      url "https://github.com/banzaicloud/kurun/releases/download/0.3.2/kurun-linux-amd64.tar.gz"
+      sha256 "9c7402bf605d430a3eac556665def8832067cb43c92c90171420a33e194c7eb7"
     end
   end
   
