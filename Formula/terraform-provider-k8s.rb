@@ -2,15 +2,15 @@
 class TerraformProviderK8s < Formula
   desc "Kubernetes Terraform provider with support for raw manifests"
   homepage "https://banzaicloud.com/"
-  version "0.7.4"
+  version "0.7.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.4/terraform-provider-k8s_0.7.4_darwin_amd64.tar.gz"
-    sha256 "80e683eb26090a73b19cd9abef0b5b7b6b0eed8cbfdb71a7b2362d073c80a6a7"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.5/terraform-provider-k8s_0.7.5_darwin_amd64.tar.gz"
+    sha256 "ed50bf97f0581e929f5c5c685569105865fc416da1bf9a0813293c472cd70b07"
   elsif OS.linux?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.4/terraform-provider-k8s_0.7.4_linux_amd64.tar.gz"
-    sha256 "85097e5184d9ca06b97012df581cd00336a9d9b78a0073605487dea86d9a54f9"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.5/terraform-provider-k8s_0.7.5_linux_amd64.tar.gz"
+    sha256 "4ae513c5c0818d3f2778837aff96fcbaa2c6b0b0ab85b9dbbd2f375c7267c2e4"
   end
 
   def install
