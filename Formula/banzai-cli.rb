@@ -2,14 +2,14 @@
 class BanzaiCli < Formula
   desc "Command-line interface for Banzai Cloud Pipeline platform"
   homepage "https://banzaicloud.com/"
-  version "0.9.0"
+  version "0.9.1"
 
   if OS.mac?
-    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.9.0/banzai_0.9.0_darwin_amd64.tar.gz"
-    sha256 "b16b1aa30fec88ff3a9dde005a700d0a84331f700c3565509ac4118fdabca025"
+    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.9.1/banzai_0.9.1_darwin_amd64.tar.gz"
+    sha256 "0ccc61357d3a670f5eb24b58e019a50173021ab38ee7837ae20227f897e82574"
   elsif OS.linux?
-    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.9.0/banzai_0.9.0_linux_amd64.tar.gz"
-    sha256 "2edc94ac9fae430fc867c3e5e6a55c94af7719460509dbe7064c008bbe5d34aa"
+    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.9.1/banzai_0.9.1_linux_amd64.tar.gz"
+    sha256 "74fce36eeaa81b76b5deb5c7c52e6dfdda37218e1e3cc19af81044d6d0c725fe"
   end
   
   depends_on "kubectl"
