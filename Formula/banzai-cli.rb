@@ -2,20 +2,28 @@
 class BanzaiCli < Formula
   desc "Command-line interface for Banzai Cloud Pipeline platform"
   homepage "https://banzaicloud.com/"
-  version "0.9.1"
+  version "0.10.0"
 
   if OS.mac?
-    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.9.1/banzai_0.9.1_darwin_amd64.tar.gz"
-    sha256 "0ccc61357d3a670f5eb24b58e019a50173021ab38ee7837ae20227f897e82574"
+    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.10.0/banzai_0.10.0_darwin_amd64.tar.gz"
+    sha256 "6e33bc032c9a87820b8c4a7fa8d2c250aba0bb2ce584401466ac620659dce02d"
   elsif OS.linux?
-    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.9.1/banzai_0.9.1_linux_amd64.tar.gz"
-    sha256 "74fce36eeaa81b76b5deb5c7c52e6dfdda37218e1e3cc19af81044d6d0c725fe"
+    url "https://github.com/banzaicloud/banzai-cli/releases/download/0.10.0/banzai_0.10.0_linux_amd64.tar.gz"
+    sha256 "d4db1df9aa9836978b327678ac73e7906483fc62fdf1f37e814f77d08185160a"
   end
   
   depends_on "kubectl"
 
   def install
     bin.install "banzai"
+    
+    # Install bash completion
+    output = Utils.popen_read("#{bin}/banzai completion bash")
+    (bash_completion/"banzai").write output
+    
+    # Install zsh completion
+    output = Utils.popen_read("#{bin}/banzai completion zsh")
+    (zsh_completion/"_banzai").write output
   end
 
   test do
