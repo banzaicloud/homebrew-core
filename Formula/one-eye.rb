@@ -2,14 +2,14 @@
 class OneEye < Formula
   desc "Command-line interface for One Eye"
   homepage "https://banzaicloud.com/"
-  version "0.2.7"
+  version "0.2.8"
 
   if OS.mac?
-    url "https://banzaicloud.com/downloads/one-eye/0.2.7/dist/one-eye_0.2.7_darwin_amd64.tar.gz"
-    sha256 "929c1bb55ee29ac7878e3d311ea9f502bbb4988af723a40ca6d54f8bc0ca5373"
+    url "https://banzaicloud.com/downloads/one-eye/0.2.8/dist/one-eye_0.2.8_darwin_amd64.tar.gz"
+    sha256 "bb8c54209f3fb4a58c79dd053285ea7891589d8b64d3219adb2f4d460e23d33d"
   elsif OS.linux?
-    url "https://banzaicloud.com/downloads/one-eye/0.2.7/dist/one-eye_0.2.7_linux_amd64.tar.gz"
-    sha256 "9710e29811a5477086e2451723d76c59ac5cd498eaa86cfcabbf1294b25a4d9a"
+    url "https://banzaicloud.com/downloads/one-eye/0.2.8/dist/one-eye_0.2.8_linux_amd64.tar.gz"
+    sha256 "1eb01294431f2c76fb46f8f760ede6a436100a9116e0f50cd091b2237c9b4d28"
   end
 
   def install
