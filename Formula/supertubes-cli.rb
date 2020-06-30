@@ -2,16 +2,16 @@
 class SupertubesCli < Formula
   desc "Command-line interface for Supertubes"
   homepage "https://banzaicloud.com/"
-  version "0.6.0"
+  version "0.6.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://banzaicloud.com/downloads/supertubes-cli/0.6.0/dist/supertubes_0.6.0_darwin_amd64.tar.gz"
-    sha256 "88ee9f48600eefaecf4459391771a99d548261a4c71fd6122aaa5bd5119c7ef5"
+    url "https://banzaicloud.com/downloads/supertubes-cli/0.6.1/dist/supertubes_0.6.1_darwin_amd64.tar.gz"
+    sha256 "bcc57bad03e39dc4b4b99d1bcdee4616b48b282f4cef3eebdd7abbf236b87e5b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://banzaicloud.com/downloads/supertubes-cli/0.6.0/dist/supertubes_0.6.0_linux_amd64.tar.gz"
-      sha256 "657d51df6ab38e92ac5a55cda262bb5c3c8d2aeb308587a1652899a759fb013d"
+      url "https://banzaicloud.com/downloads/supertubes-cli/0.6.1/dist/supertubes_0.6.1_linux_amd64.tar.gz"
+      sha256 "8719480bc7b37f9fbb49d991d7ad53071ab7d314367d6da1389c1edf30ad8e3d"
     end
   end
 
