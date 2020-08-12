@@ -2,18 +2,29 @@
 class TerraformProviderK8s < Formula
   desc "Kubernetes Terraform provider with support for raw manifests"
   homepage "https://banzaicloud.com/"
-  version "0.7.7"
+  version "0.8.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.7/terraform-provider-k8s_0.7.7_darwin_amd64.tar.gz"
-    sha256 "57eb094ee85d7689ffd0b1834d2c0be9b2b41a65e64244f3a47d3b886745f173"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.0/terraform-provider-k8s_0.8.0_darwin_amd64.zip"
+    sha256 "b7cfd3195d1bba0604e2c617de091fa790e82fb29c96a8f20a4b07da626e3017"
   elsif OS.linux?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.7.7/terraform-provider-k8s_0.7.7_linux_amd64.tar.gz"
-    sha256 "850c2e07596a0c255123b35807dadbf592ac6e2a61bedb34b426c033a23cbc1f"
+    if Hardware::CPU.intel?
+      url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.0/terraform-provider-k8s_0.8.0_linux_amd64.zip"
+      sha256 "886b2f6b0f75dd9d528f3d4acbfe6ab4edadffa0bb50d13de28c287138351f4c"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.0/terraform-provider-k8s_0.8.0_linux_arm64.zip"
+        sha256 "910efd910af8c964f303e2ab8607286e952fb730aaa72dc1c6d42b10db9aacdd"
+      else
+        url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.0/terraform-provider-k8s_0.8.0_linux_arm.zip"
+        sha256 "5c913239bfd8fd771ca8937140f345a8fc5bfb850f9ddb8454ac4a645c77e4a3"
+      end
+    end
   end
 
   def install
-    bin.install "terraform-provider-k8s"
+    bin.install "terraform-provider-k8s_v0.8.0"
   end
 end
