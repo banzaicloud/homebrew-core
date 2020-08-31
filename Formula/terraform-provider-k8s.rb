@@ -2,29 +2,29 @@
 class TerraformProviderK8s < Formula
   desc "Kubernetes Terraform provider with support for raw manifests"
   homepage "https://banzaicloud.com/"
-  version "0.8.2"
+  version "0.8.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.2/terraform-provider-k8s_0.8.2_darwin_amd64.zip"
-    sha256 "977e10f1bc4228634d42c3d2b01c50850e411b1c7283109ff6046fcdb0a17987"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.3/terraform-provider-k8s_0.8.3_darwin_amd64.zip"
+    sha256 "47d8719e1e951b303cca253405a3d9fd2142d326f935691128b35f88413e793a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.2/terraform-provider-k8s_0.8.2_linux_amd64.zip"
-      sha256 "addccf62780281388e98acaf481ef2e296e46d3abd0130ac48876ecfef94d482"
+      url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.3/terraform-provider-k8s_0.8.3_linux_amd64.zip"
+      sha256 "4acb3ad2cd5b6934f34c811b995054218327480ecca314aa886b465789723f3e"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.2/terraform-provider-k8s_0.8.2_linux_arm64.zip"
-        sha256 "bcfeae859dd9dbafabfab5fb89b13f523f82e92e3e105d01cb8566e16451d609"
+        url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.3/terraform-provider-k8s_0.8.3_linux_arm64.zip"
+        sha256 "d6183549340cf41c8972d3cc5b9cdeb85c35a2bf062046a4dc4c44feaaa72f0c"
       else
-        url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.2/terraform-provider-k8s_0.8.2_linux_arm.zip"
-        sha256 "e00f1c5d7c7c37d12791e7ad2ce58bbcec84f1c304aa7485be34355e7523f1db"
+        url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.8.3/terraform-provider-k8s_0.8.3_linux_arm.zip"
+        sha256 "85fcebc420b04e2346483bd715228c65b628d119b05c7f4ad156a4b9db42409a"
       end
     end
   end
 
   def install
-    bin.install "terraform-provider-k8s_v0.8.2"
+    bin.install "terraform-provider-k8s_v0.8.3"
   end
 end
