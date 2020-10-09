@@ -6,10 +6,10 @@ class BackyardsCli < Formula
 
   if OS.mac?
     url "https://github.com/banzaicloud/backyards-cli/releases/download/v1.4.4/backyards_1.4.4_darwin_amd64.tar.gz"
-    sha256 "0207797fabad2b8fc9c2c70f0029bbb225064411ba919201ad992ffa5854e7ae"
+    sha256 "93e3e816262987f74e8c640f3451ac4cd9abdf307ab2b9bc8fdc0c03183ca19f"
   elsif OS.linux?
     url "https://github.com/banzaicloud/backyards-cli/releases/download/v1.4.4/backyards_1.4.4_linux_amd64.tar.gz"
-    sha256 "9bbfd7bade831d648f7b88fce9b28245d7b011b47a318d79311d3e426a9d4621"
+    sha256 "bc23f8035893987c22a875ffa28bc4a5162f81cfc7848888eb5c680f71b55be7"
   end
 
   def install
