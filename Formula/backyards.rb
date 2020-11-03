@@ -7,11 +7,11 @@ class Backyards < Formula
 
   if OS.mac?
     url "https://github.com/banzaicloud/backyards/releases/download/v1.4.5/backyards_1.4.5_darwin_amd64.tar.gz"
-    sha256 "e463e0177723b84458650d4f10f23a87e8e3cee8b205b7d2a7de82427534130b"
+    sha256 "ea425baed7b8460d4db14e48e3949053c34e9f074c2bfe33fb62fd541d5e3868"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/banzaicloud/backyards/releases/download/v1.4.5/backyards_1.4.5_linux_amd64.tar.gz"
-      sha256 "31e299586f517958ceadfe2006e5102744966de3bf62894255fbdb989a2ebfbc"
+      sha256 "c3b9da0caf11d25966e5d79ef2c5c6709a5888731c2107e046e184dac786925a"
     end
   end
 
