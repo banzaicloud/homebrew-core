@@ -6,11 +6,11 @@ class BackyardsCli < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://banzaicloud.com/downloads/backyards-cli/v1.4.7/dist/backyards_1.4.7_darwin_amd64.tar.gz"
+    url "https://banzaicloud.com/downloads/backyards-cli/1.4.7/dist/backyards_1.4.7_darwin_amd64.tar.gz"
     sha256 "b2a566538dd3198c9042fcc2cb68eb20f96eb7201f841f5ba3d3fe964b7caf6d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://banzaicloud.com/downloads/backyards-cli/v1.4.7/dist/backyards_1.4.7_linux_amd64.tar.gz"
+      url "https://banzaicloud.com/downloads/backyards-cli/1.4.7/dist/backyards_1.4.7_linux_amd64.tar.gz"
       sha256 "ad3f8fcb089d55dbbc16114aa6679460e57c43021c29d1f79bdceb303464c948"
     end
   end
