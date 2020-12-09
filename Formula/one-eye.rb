@@ -2,16 +2,16 @@
 class OneEye < Formula
   desc "Command-line interface for One Eye"
   homepage "https://banzaicloud.com/"
-  version "0.4.2"
+  version "0.4.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://banzaicloud.com/downloads/one-eye/0.4.2/dist/one-eye_0.4.2_darwin_amd64.tar.gz"
-    sha256 "16236c01e0cc8976c5aceaae709a0d7b0981da9fb2a1b94565e42f16ad2a48f6"
+    url "https://banzaicloud.com/downloads/one-eye/0.4.4/dist/one-eye_0.4.4_darwin_amd64.tar.gz"
+    sha256 "dbfcc6e4877c2e447df1ed9a64e24edda99b80432f76ece7578387598fb967ef"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://banzaicloud.com/downloads/one-eye/0.4.2/dist/one-eye_0.4.2_linux_amd64.tar.gz"
-      sha256 "fec1bc82ebd51bd9ace9faba01c75fc257ac25f707b8432b40cc21c9529bf518"
+      url "https://banzaicloud.com/downloads/one-eye/0.4.4/dist/one-eye_0.4.4_linux_amd64.tar.gz"
+      sha256 "614c36911f22f2b4a55de4d424464738f20d5902a1b821db6692c69776fb011e"
     end
   end
 
