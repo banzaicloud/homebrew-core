@@ -2,16 +2,16 @@
 class BackyardsCli < Formula
   desc "Command-line interface for Backyards"
   homepage "https://banzaicloud.com/"
-  version "1.5.1"
+  version "1.5.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://banzaicloud.com/downloads/backyards-cli/1.5.1/dist/backyards_1.5.1_darwin_amd64.tar.gz"
-    sha256 "13fdde3574da3f417f1ccbc55076950fbb1fcc3cd7694d8c309e55c297fc27b8"
+    url "https://banzaicloud.com/downloads/backyards-cli/1.5.2/dist/backyards_1.5.2_darwin_amd64.tar.gz"
+    sha256 "b5001abe75cb33f19e7272a99e7a93701b855d46ae23e52162534e8f38d05eaa"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://banzaicloud.com/downloads/backyards-cli/1.5.1/dist/backyards_1.5.1_linux_amd64.tar.gz"
-      sha256 "3c5159b3ed33a09780ad20711d17d2dfc57841301e47bd600b942b5213371a88"
+      url "https://banzaicloud.com/downloads/backyards-cli/1.5.2/dist/backyards_1.5.2_linux_amd64.tar.gz"
+      sha256 "0e641e0f2ec52bd8ad4b3e73123cb0d838f078ab1f916908dfdedc4c1f1b99ea"
     end
   end
 
