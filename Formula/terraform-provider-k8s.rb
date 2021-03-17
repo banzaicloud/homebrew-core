@@ -5,27 +5,31 @@
 class TerraformProviderK8s < Formula
   desc "Kubernetes Terraform provider with support for raw manifests"
   homepage "https://banzaicloud.com/"
-  version "0.9.0"
+  version "0.9.1"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.0/terraform-provider-k8s_0.9.0_darwin_amd64.zip"
-    sha256 "1ffa0db7e4a140c52f0ba32521d17ccfa5854a12f58a0b7921adad2da507c280"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.1/terraform-provider-k8s_0.9.1_darwin_amd64.zip"
+    sha256 "991f1abe91c5e85d7056a40269a3ede16ea574f7d660f60276a21465f64f564d"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.1/terraform-provider-k8s_0.9.1_darwin_arm64.zip"
+    sha256 "64a2bf297b838f139acf287690e8732e74285cacaac464f99b4bf47d8239d527"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.0/terraform-provider-k8s_0.9.0_linux_amd64.zip"
-    sha256 "3b29c095470553796e1905324e7c3a6c0c2bb47e3a570eb0d45e770a5eaca9ed"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.1/terraform-provider-k8s_0.9.1_linux_amd64.zip"
+    sha256 "25d52b945a895a06a33756f77bfc28f1297bdece01193dcd94f780dc7ba5622a"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.0/terraform-provider-k8s_0.9.0_linux_arm.zip"
-    sha256 "2bbb8180db7ad10fe01bfc98ade37e0bf50b62923fdae5f1453583f5e7285db9"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.1/terraform-provider-k8s_0.9.1_linux_arm.zip"
+    sha256 "2fafff1df61205ab025e7c97a703c77091b68e739bc43df1043b6ca56bfea54d"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.0/terraform-provider-k8s_0.9.0_linux_arm64.zip"
-    sha256 "8722febdf87b4217a50fa326e4214528a1acec20ad00c083d2ddf8a3008242f7"
+    url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.1/terraform-provider-k8s_0.9.1_linux_arm64.zip"
+    sha256 "ff204d13e191a65c37a357f28e623e02c132ae26a8c1939acf1a4bf6177ae892"
   end
 
   def install
-    bin.install "terraform-provider-k8s_v0.9.0"
+    bin.install "terraform-provider-k8s"
   end
 end
