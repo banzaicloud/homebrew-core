@@ -5,23 +5,31 @@
 class Kurun < Formula
   desc "Run main.go in Kubernetes with one command"
   homepage "https://banzaicloud.com/blog/kurun"
-  version "0.5.4"
-  bottle :unneeded
+  version "0.5.5"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/banzaicloud/kurun/releases/download/0.5.4/kurun-darwin-amd64.tar.gz"
-    sha256 "639648984aa7894ca5620997e8dbac715008e71442997cfb56e7103b6cb6eecd"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/banzaicloud/kurun/releases/download/0.5.5/kurun-darwin-amd64.tar.gz"
+      sha256 "42667813e950f606bac6ca24997304beb578483d5a9a803ef2b07c0e8896b759"
+
+      def install
+        bin.install "kurun"
+      end
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/banzaicloud/kurun/releases/download/0.5.4/kurun-linux-amd64.tar.gz"
-    sha256 "7df05f731ddf15c9eb0a87f13e12d9799a6b8a371913cf0e629e117b05cfcf4d"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/banzaicloud/kurun/releases/download/0.5.5/kurun-linux-amd64.tar.gz"
+      sha256 "c59a3c5a4ae76dfd2af9aad8fa3614a8feb26904ac12c64cb8dd5003074b6c44"
+
+      def install
+        bin.install "kurun"
+      end
+    end
   end
 
   depends_on "inlets"
-
-  def install
-    bin.install "kurun"
-  end
 
   test do
     system "#{bin}/kurun --version"
