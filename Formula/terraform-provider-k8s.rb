@@ -6,7 +6,6 @@ class TerraformProviderK8s < Formula
   desc "Kubernetes Terraform provider with support for raw manifests"
   homepage "https://banzaicloud.com/"
   version "0.9.1"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/banzaicloud/terraform-provider-k8s/releases/download/v0.9.1/terraform-provider-k8s_0.9.1_darwin_amd64.zip"

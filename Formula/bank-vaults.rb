@@ -6,7 +6,6 @@ class BankVaults < Formula
   desc "A Vault swiss-army knife CLI with Kubernetes support"
   homepage "https://banzaicloud.com/products/bank-vaults/"
   version "1.14.3"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?

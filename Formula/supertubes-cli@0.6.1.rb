@@ -3,7 +3,6 @@ class SupertubesCliAT061 < Formula
   desc "Command-line interface for Supertubes"
   homepage "https://banzaicloud.com/"
   version "0.6.1"
-  bottle :unneeded
 
   if OS.mac?
     url "https://banzaicloud.com/downloads/supertubes-cli/0.6.1/dist/supertubes_0.6.1_darwin_amd64.tar.gz"
