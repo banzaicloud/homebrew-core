@@ -3,7 +3,6 @@ class OneEye < Formula
   desc "Command-line interface for One Eye"
   homepage "https://banzaicloud.com/"
   version "0.4.5"
-  bottle :unneeded
 
   if OS.mac?
     url "https://banzaicloud.com/downloads/one-eye/0.4.5/dist/one-eye_0.4.5_darwin_amd64.tar.gz"

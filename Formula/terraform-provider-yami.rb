@@ -3,7 +3,6 @@ class TerraformProviderYami < Formula
   desc "Terraform provider with YAML deep merge capabilities"
   homepage "https://banzaicloud.com/"
   version "0.0.5"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/banzaicloud/terraform-provider-yami/releases/download/0.0.5/terraform-provider-yami_0.0.5_darwin_amd64.tar.gz"

@@ -3,7 +3,6 @@ class Yami < Formula
   desc "YAML CLI merge tool"
   homepage "https://banzaicloud.com/"
   version "0.0.4"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/banzaicloud/yami/releases/download/0.0.4/yami_0.0.4_darwin_amd64.tar.gz"

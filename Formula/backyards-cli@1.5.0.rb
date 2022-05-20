@@ -3,7 +3,6 @@ class BackyardsCliAT150 < Formula
   desc "Command-line interface for Backyards"
   homepage "https://banzaicloud.com/"
   version "1.5.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://banzaicloud.com/downloads/backyards-cli/1.5.0/dist/backyards_1.5.0_darwin_amd64.tar.gz"
