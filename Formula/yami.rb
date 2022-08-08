@@ -5,11 +5,11 @@
 class Yami < Formula
   desc "YAML CLI merge tool"
   homepage "https://banzaicloud.com/"
-  version "0.0.5-dev.1"
+  version "0.0.5-dev.3"
 
   on_macos do
-    url "https://github.com/banzaicloud/yami/releases/download/0.0.5-dev.1/yami_0.0.5-dev.1_darwin_amd64.tar.gz"
-    sha256 "ab940fb63be4d32ec5bf355f9ed2e13a99a8eae8f874f60b19404dff43ccde0b"
+    url "https://github.com/banzaicloud/yami/releases/download/0.0.5-dev.3/yami_0.0.5-dev.3_darwin_amd64.tar.gz"
+    sha256 "c85a88935d46f815a2fef8d3f2cb41d2822f1bb361700eb87d0ee64f51476116"
 
     def install
       bin.install "yami"
@@ -28,8 +28,8 @@ class Yami < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/banzaicloud/yami/releases/download/0.0.5-dev.1/yami_0.0.5-dev.1_linux_amd64.tar.gz"
-      sha256 "f86c6a8fa26e2c8bf3b2abf387a8c64cab71a255a9acc65df931ceead2c29446"
+      url "https://github.com/banzaicloud/yami/releases/download/0.0.5-dev.3/yami_0.0.5-dev.3_linux_amd64.tar.gz"
+      sha256 "ad81cd150ec1579543426379fa0dea7ff72ba6a8031edf91d43f2260ea22e805"
 
       def install
         bin.install "yami"
