@@ -37,8 +37,6 @@ class Kurun < Formula
     end
   end
 
-  depends_on "inlets"
-
   test do
     system "#{bin}/kurun --version"
   end
