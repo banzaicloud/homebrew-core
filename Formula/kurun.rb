@@ -5,31 +5,39 @@
 class Kurun < Formula
   desc "Run main.go in Kubernetes with one command"
   homepage "https://banzaicloud.com/blog/kurun"
-  version "0.6.4"
+  version "0.7.0"
 
   on_macos do
-    url "https://github.com/banzaicloud/kurun/releases/download/0.6.4/kurun-darwin-amd64.tar.gz"
-    sha256 "7ba857ee2860b6e9cf62445e41ee1039bcf6d07826b53acc8665223e3c24dc17"
-
-    def install
-      bin.install "kurun"
-    end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the Kurun
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/banzaicloud/kurun/releases/download/0.7.0/kurun-darwin-arm64.tar.gz"
+      sha256 "504d673d83695cebf243817a374f61172a09b90abef06ad1013ec2f208c8782d"
+
+      def install
+        bin.install "kurun"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/banzaicloud/kurun/releases/download/0.7.0/kurun-darwin-amd64.tar.gz"
+      sha256 "17f6a039d504580e2f7d46d15908f6611ad07e3f187e15a7d041390156c5b4bd"
+
+      def install
+        bin.install "kurun"
       end
     end
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/banzaicloud/kurun/releases/download/0.7.0/kurun-linux-arm64.tar.gz"
+      sha256 "850388b835a3ef1480f3facc18831944fa4e199a1f0c9b07ad62eb73d4fa8163"
+
+      def install
+        bin.install "kurun"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/banzaicloud/kurun/releases/download/0.6.4/kurun-linux-amd64.tar.gz"
-      sha256 "1bea6f63b7658a4fc0f2f90ed00d104e4d7dae45d34ff17697ffea13c092ecb4"
+      url "https://github.com/banzaicloud/kurun/releases/download/0.7.0/kurun-linux-amd64.tar.gz"
+      sha256 "689ccf83dcf7f6f6517ad1363bb8a0daea1983e52ea60f2aa7bb3f41044546b0"
 
       def install
         bin.install "kurun"
